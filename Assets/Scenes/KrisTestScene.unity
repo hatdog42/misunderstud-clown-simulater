@@ -2008,6 +2008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 169d16183f67280458ca9f66ce0ed480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Happiness: 0
   eyeLeft: {fileID: 1183665301}
   eyeRight: {fileID: 1138524819}
   eyebrowLeft: {fileID: 689097329}

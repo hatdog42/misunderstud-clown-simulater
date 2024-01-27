@@ -25,7 +25,8 @@ public class HappinessMeter : MonoBehaviour
     public bool happy;
     public int childCounter;
     private float Total;
-    
+
+    private Animator _animator;
 
     private void CalculateHappiness()
     {
@@ -44,12 +45,7 @@ public class HappinessMeter : MonoBehaviour
     
     void Start()
     {
-        mouthLeft = GameObject.Find("ML").GetComponent<Transform>();
-        mouthLeft = GameObject.Find("MR").GetComponent<Transform>();
-        mouthLeft = GameObject.Find("EL").GetComponent<Transform>();
-        mouthLeft = GameObject.Find("ER").GetComponent<Transform>();
-        mouthLeft = GameObject.Find("EBL").GetComponent<Transform>();
-        mouthLeft = GameObject.Find("EBR").GetComponent<Transform>();
+        _animator = GetComponent<Animator>();
     }
   
     void Update()
@@ -61,6 +57,7 @@ public class HappinessMeter : MonoBehaviour
             {
                 happy = true;
                 childCounter += 1;
+                //_animator.Play("PanelExit");
             }
         }
     }
