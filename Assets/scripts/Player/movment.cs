@@ -8,7 +8,7 @@ public class movment : MonoBehaviour
     private Transform m_transform;
 
     public Transform AttackPoint;
-    public float attackRange = 0.7f;
+    public float attackRange = 0.5f;
     public LayerMask enemyLayers;
     
     public Camera camera;
@@ -16,7 +16,9 @@ public class movment : MonoBehaviour
     private Rigidbody2D _rigidbody2D;
     private inputControler _input;
 
-    private static bool canMove;
+    [SerializeField]private Animator _animator;
+
+    private static bool canMove = true;
     private void Start()
     {
         m_transform = GetComponent<Transform>();
@@ -43,16 +45,25 @@ public class movment : MonoBehaviour
         Vector2 direction = camera.ScreenToWorldPoint
             (Input.mousePosition) - m_transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        Quaternion rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
             m_transform.rotation = rotation;
     }
 
     private void Attack()
     {
+        
+        _animator.Play("attack");
+            
         Collider2D[] hitEnemies =Physics2D.OverlapCircleAll(AttackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
-            print("hit" + name);
+            ChildRunaway childRunaway = enemy.GetComponent<ChildRunaway>();
+            
+            if (childRunaway != null)
+            {
+                childRunaway.happy = true;
+                
+            }
         }
     }
     private void OnDrawGizmosSelected()

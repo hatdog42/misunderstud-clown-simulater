@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f24c33cc406d70a4e832ba991b31a6eb
+guid: c77d07bb2c2820f418567876bc279aa5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8398804640932153397
-    second: Idle_0003_003_0
+      213: 3197124222761636849
+    second: Snatch_Layer-2_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -98,22 +98,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_0003_003_0
+      name: Snatch_Layer-2_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 41
-        width: 249
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 17
+        y: 9
+        width: 226
+        height: 228
+      alignment: 9
+      pivot: {x: 0.68892604, y: 0.4919456}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bc736578da3717b80800000000000000
-      internalID: -8398804640932153397
+      spriteID: 1f31180aa877e5c20800000000000000
+      internalID: 3197124222761636849
       vertices: []
       indices: 
       edges: []
@@ -121,7 +121,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 068344e6fc173f345a78482ef9775aba
     internalID: 0
     vertices: []
     indices: 
@@ -129,7 +129,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle_0003_003_0: -8398804640932153397
+      Snatch_Layer-2_0: 3197124222761636849
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

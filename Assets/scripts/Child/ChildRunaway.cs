@@ -9,8 +9,8 @@ public class ChildRunaway : MonoBehaviour
     
     [SerializeField] private NavMeshAgent _agent = null;
     [SerializeField] private Transform target = null;
-    
-    private bool happy = false;
+
+    public bool happy = false;
     private bool wantToRunAway = false;
 
     private Transform childPos;
@@ -88,5 +88,10 @@ public class ChildRunaway : MonoBehaviour
     {
         if (other.CompareTag("Player")) 
             wantToRunAway = false;
+    }
+
+    public void OnChildCaught()
+    {
+        
     }
 }
