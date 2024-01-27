@@ -411,6 +411,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   camera: {fileID: 568165578}
+  _audioSource: {fileID: 0}
+  screemClip: {fileID: 0}
   _animator: {fileID: 449048304}
 --- !u!50 &449048301
 Rigidbody2D:
@@ -1020,7 +1022,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b61d88ff913581b4eae1fd5163c3f913, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3341,7 +3343,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 568165579}
   - {fileID: 449048299}
-  - {fileID: 803478289}
   - {fileID: 1340779711}
   - {fileID: 501499415}
   - {fileID: 927616552}
@@ -3353,3 +3354,4 @@ SceneRoots:
   - {fileID: 1285208275}
   - {fileID: 1938194517}
   - {fileID: 787460006}
+  - {fileID: 803478289}
