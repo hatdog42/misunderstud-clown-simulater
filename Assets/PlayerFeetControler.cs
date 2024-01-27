@@ -15,13 +15,13 @@ public class PlayerFeetControler : MonoBehaviour
 
     private void Update()
     {
-        if (InputControler.moveDirection != Vector2.zero)
+        if (InputControler.moveDirection.sqrMagnitude > 0.1)
         {
             animator.Play("walk");
         }
         else
         {
-            //animator.Play("idle");
+            animator.Play("idle",0);
         }
 
         switch (InputControler.moveDirection)
@@ -51,7 +51,7 @@ public class PlayerFeetControler : MonoBehaviour
                 _transform.eulerAngles = new Vector3(0, 0, -315);
                 break;
             default:
-                print("is idle");
+                
                 break;
         }
 
