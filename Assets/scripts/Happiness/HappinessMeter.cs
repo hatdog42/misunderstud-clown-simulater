@@ -14,12 +14,12 @@ public class HappinessMeter : MonoBehaviour
     public Transform mouthLeft;
     
 
-    private Vector3 _idealeyeL = new Vector3(-2, 2, 0);
-    private Vector3 _idealeyeR= new Vector3(2, 2, 0);
-    private Vector3 _idealeyebrowL= new Vector3(-1, 3,0);
-    private Vector3 _idealeyebrowR= new Vector3(1, 3, 0);
-    private Vector3 _idealmouthL= new Vector3(-2.2f, 1, 0);
-    private Vector3 _idealmouthR= new Vector3(2.4f, 1, 0);
+    [SerializeField] private Vector3 _idealeyeL = new Vector3(-2, 2, 0);
+    [SerializeField] private Vector3 _idealeyeR= new Vector3(2, 2, 0);
+    [SerializeField] private Vector3 _idealeyebrowL= new Vector3(-1, 3,0);
+    [SerializeField] private Vector3 _idealeyebrowR= new Vector3(1, 3, 0);
+    [SerializeField] private Vector3 _idealmouthL= new Vector3(-2.2f, 1, 0);
+    [SerializeField] private Vector3 _idealmouthR= new Vector3(2.4f, 1, 0);
     
     
     public bool happy;
