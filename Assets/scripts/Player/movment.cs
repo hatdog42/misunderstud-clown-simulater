@@ -15,6 +15,8 @@ public class movment : MonoBehaviour
     
     private Rigidbody2D _rigidbody2D;
     private inputControler _input;
+
+    private static bool canMove;
     private void Start()
     {
         m_transform = GetComponent<Transform>();
@@ -23,7 +25,10 @@ public class movment : MonoBehaviour
     }
     private void Update()
     {
-        _rigidbody2D.velocity = new Vector2(_input.moveDirection.x * moveSpeed, _input.moveDirection.y * moveSpeed);
+        if (canMove)
+        {
+            _rigidbody2D.velocity = new Vector2(_input.moveDirection.x * moveSpeed, _input.moveDirection.y * moveSpeed);
+        }
 
         if (_input.attackPressed)
         {
