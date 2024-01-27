@@ -16,6 +16,10 @@ public class movment : MonoBehaviour
     private Rigidbody2D _rigidbody2D;
     private inputControler _input;
 
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip screemClip;
+    
+
     [SerializeField]private Animator _animator;
 
     private static bool canMove = true;
@@ -62,7 +66,7 @@ public class movment : MonoBehaviour
             if (childRunaway != null)
             {
                 childRunaway.happy = true;
-                
+                _audioSource.PlayOneShot(screemClip);
             }
         }
     }
