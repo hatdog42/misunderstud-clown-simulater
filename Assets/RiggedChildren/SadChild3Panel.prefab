@@ -809,7 +809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Happiness: 0
-  eyeLeft: {fileID: 7685720128823360538}
+  eyeLeft: {fileID: 7989028960065974930}
   eyeRight: {fileID: 1775007369862539639}
   eyebrowLeft: {fileID: 2927152737220402663}
   eyebrowRight: {fileID: 919941978898149188}

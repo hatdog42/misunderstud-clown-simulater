@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - SadChild1
+  - SadChild2
+  - SadChild3
+  - SadChild4
+  - SadChild5
+  - SadChild6
   layers:
   - Default
   - TransparentFX
