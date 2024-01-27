@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4e91e56813c4e17419a5ffaf9a0c2c13
+guid: 2fa99fcad3776e34c992ac69c3812614
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8369468576419595515
-    second: Clown1_0
+      213: 4381362415263039311
+    second: Clown2_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,12 +98,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Clown1_0
+      name: Clown2_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 335
         y: 0
-        width: 1920
+        width: 1267
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bf4c840b353562470800000000000000
-      internalID: 8369468576419595515
+      spriteID: f4f300a37e9bdcc30800000000000000
+      internalID: 4381362415263039311
       vertices: []
       indices: 
       edges: []
@@ -129,7 +129,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Clown1_0: 8369468576419595515
+      Clown2_0: 4381362415263039311
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
