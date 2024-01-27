@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class HappinessMeter : MonoBehaviour
 {
+    public float Happiness;
     public Transform eyeLeft;
     public Transform eyeRight;
     public Transform eyebrowLeft;
