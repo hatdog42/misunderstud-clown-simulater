@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
         
         controls = new CursorController();
         ChangeCursor(cursorTexture);
-        Cursor.lockState = CursorLockMode.Confined;
+        //Cursor.lockState = CursorLockMode.Confined;
     }
 
     private void OnEnable()
@@ -59,6 +59,6 @@ public class GameManager : MonoBehaviour
     private void ChangeCursor(Texture2D cursorType)
     {
         Vector2 hotspot = new Vector2(cursorType.width / 2, cursorType.height / 2);
-        Cursor.SetCursor(cursorType, hotspot, CursorMode.Auto);
+        //Cursor.SetCursor(cursorType, hotspot, CursorMode.Auto);
     }
 }
