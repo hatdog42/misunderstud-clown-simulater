@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class movment : MonoBehaviour
@@ -66,6 +67,7 @@ public class movment : MonoBehaviour
             if (childRunaway != null)
             {
                 childRunaway.happy = true;
+                childRunaway.OnChildCaught();
                 _audioSource.PlayOneShot(screemClip);
             }
         }
