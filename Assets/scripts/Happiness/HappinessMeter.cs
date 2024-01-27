@@ -40,7 +40,26 @@ public class HappinessMeter : MonoBehaviour
         Total+= Vector3.Distance(_idealmouthL, mouthLeft.position);
         Total+= Vector3.Distance(_idealmouthR, mouthRight.position);
         print(Total);
+        if (Total is < 10 and > 8)
+        {
+            Happiness = 0.2f;
+        }
+        if (Total is < 8 and > 6)
+        {
+            Happiness = 0.5f;
+        }
+        if (Total is < 6 and > 3.5f)
+        {
+            Happiness = 0.7f;
+        }
+        if (Total < 3.5)
+        {
+            Happiness = 1f;
+        }
         
+
+
+
     }
     
     void Start()
