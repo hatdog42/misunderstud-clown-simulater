@@ -12,14 +12,16 @@ public class HappinessMeter : MonoBehaviour
     public Transform eyebrowRight;
     public Transform mouthRight;
     public Transform mouthLeft;
-    
 
-    [SerializeField] private Vector3 _idealeyeL = new Vector3(-2, 2, 0);
-    [SerializeField] private Vector3 _idealeyeR= new Vector3(2, 2, 0);
-    [SerializeField] private Vector3 _idealeyebrowL= new Vector3(-1, 3,0);
-    [SerializeField] private Vector3 _idealeyebrowR= new Vector3(1, 3, 0);
-    [SerializeField] private Vector3 _idealmouthL= new Vector3(-2.2f, 1, 0);
-    [SerializeField] private Vector3 _idealmouthR= new Vector3(2.4f, 1, 0);
+
+    [SerializeField] private GameObject _idealeyeL;
+    [SerializeField] private GameObject _idealeyeR;
+    [SerializeField] private GameObject _idealeyebrowL;
+    [SerializeField] private GameObject _idealeyebrowR;
+    [SerializeField] private GameObject _idealmouthL;
+    [SerializeField] private GameObject _idealmouthR;
+
+    private Vector3 eyeLPos, eyeRPos, browLPos, browRPos, mouthLPos, mouthRPos;
     
     
     public bool happy;
@@ -33,12 +35,12 @@ public class HappinessMeter : MonoBehaviour
         Total = 0;
         //can loop through a list?
         //Calculate the distance between the ideal position and the actual position of each sticker and add values together, the lower the value the higher the happiness
-        Total+= Vector3.Distance(_idealeyeL, eyeLeft.position);
-        Total+= Vector3.Distance(_idealeyeR, eyeRight.position);
-        Total+= Vector3.Distance(_idealeyebrowL, eyebrowLeft.position);
-        Total+= Vector3.Distance(_idealeyebrowR, eyebrowRight.position);
-        Total+= Vector3.Distance(_idealmouthL, mouthLeft.position);
-        Total+= Vector3.Distance(_idealmouthR, mouthRight.position);
+        Total+= Vector3.Distance(eyeLPos, eyeLeft.position);
+        Total+= Vector3.Distance(eyeRPos, eyeRight.position);
+        Total+= Vector3.Distance(browLPos, eyebrowLeft.position);
+        Total+= Vector3.Distance(browRPos, eyebrowRight.position);
+        Total+= Vector3.Distance(mouthLPos, mouthLeft.position);
+        Total+= Vector3.Distance(mouthRPos, mouthRight.position);
         print(Total);
         if (Total is < 10 and > 8)
         {
@@ -65,6 +67,13 @@ public class HappinessMeter : MonoBehaviour
     void Start()
     {
         _animator = GetComponent<Animator>();
+        
+        eyeLPos = _idealeyeL.transform.position;
+        eyeRPos = _idealeyeR.transform.position;
+        browLPos = _idealeyebrowL.transform.position;
+        browRPos = _idealeyebrowR.transform.position;
+        mouthLPos = _idealmouthL.transform.position;
+        mouthRPos = _idealmouthR.transform.position;
     }
   
     void Update()
