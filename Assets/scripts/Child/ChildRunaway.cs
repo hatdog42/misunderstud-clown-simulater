@@ -38,7 +38,11 @@ public class ChildRunaway : MonoBehaviour
         else if (!happy && wantToRunAway)
         {
             Vector2 normDir = (target.position - transform.position).normalized;
+
             
+            {
+                
+            }
             normDir = Quaternion.AngleAxis(runAngle, Vector3.forward)* normDir;
                 
             MoveToPos(transform.position - new Vector3(normDir.x,normDir.y,0) * displasmendDist);
