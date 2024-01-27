@@ -17,6 +17,8 @@ public class ChildRunaway : MonoBehaviour
 
     private float runAngle;
 
+    [SerializeField] private GameObject facePanel;
+
     private void Start()
     {
         if (_agent == null)
@@ -92,6 +94,6 @@ public class ChildRunaway : MonoBehaviour
 
     public void OnChildCaught()
     {
-        
+        facePanel.SetActive(true);
     }
 }
