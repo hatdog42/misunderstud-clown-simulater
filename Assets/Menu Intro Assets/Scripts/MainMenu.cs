@@ -16,6 +16,7 @@ public class MainMenu : MonoBehaviour
     { 
         fadeIsHappening = false;
         _mainMenuMusic.volume = 0.1f;
+        GameManager.childCounter = 0;
     }
 
     public void OnPlayClicked()
