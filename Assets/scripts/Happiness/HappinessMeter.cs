@@ -141,7 +141,7 @@ public class HappinessMeter : MonoBehaviour
 
     private IEnumerator PanelDestroy()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         Destroy(gameObject);
     }
 }
