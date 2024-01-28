@@ -37,7 +37,7 @@ public class HappinessMeter : MonoBehaviour
     private Vector3 _idealmouthR;
     
     public bool happy;
-    public int childCounter;
+    public static int childCounter;
     private float Total;
 
     private Animator _animator;
