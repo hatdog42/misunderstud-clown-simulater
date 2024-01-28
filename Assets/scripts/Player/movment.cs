@@ -68,13 +68,12 @@ public class movment : MonoBehaviour
             
             if (childRunaway != null)
             {
-                //if (!hitEnemies.Collider2D.isTrigger)
+                if (!enemy.CompareTag("trigger"))
                 {
-                    
+                    childRunaway.happy = true;
+                    childRunaway.OnChildCaught();
+                    _audioSource.PlayOneShot(screemClip);
                 }
-                childRunaway.happy = true;
-                childRunaway.OnChildCaught();
-                _audioSource.PlayOneShot(screemClip);
             }
         }
     }
