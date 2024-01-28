@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class VolumeController : MonoBehaviour
 {
-    public AudioSource m_MyAudioSource;
+    private AudioSource m_MyAudioSource;
     private HappinessMeter _happinessMeter;
+
+    public AudioClip laughClip;
     void Start()
     {
-        _happinessMeter = GameObject.Find("HappinessM").GetComponent<HappinessMeter>();
+        _happinessMeter = GetComponent<HappinessMeter>();
         m_MyAudioSource = GetComponent<AudioSource>();
         m_MyAudioSource.Play();
     }
@@ -23,6 +25,6 @@ public class VolumeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        m_MyAudioSource.volume = _happinessMeter.Happiness;
     }
 }

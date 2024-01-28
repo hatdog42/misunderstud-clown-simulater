@@ -17,6 +17,7 @@ public class HappinessMeter : MonoBehaviour
     private CursorController controls;
     private AudioSource _audio;
     public AudioClip stretchySound;
+    public AudioClip childrenLaughing;
 
     /*[SerializeField] private Vector3 _idealeyeL = new Vector3(-2, 2, 0);
     [SerializeField] private Vector3 _idealeyeR= new Vector3(2, 2, 0);
