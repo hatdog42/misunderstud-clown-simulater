@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
@@ -9,18 +8,24 @@ public class ChildRunaway : MonoBehaviour
     
     [SerializeField] private NavMeshAgent _agent = null;
     [SerializeField] private Transform target = null;
+    
 
     public bool happy = false;
     private bool wantToRunAway = false;
 
     private Transform childPos;
+    private float lookatAngle = -90f;
 
     private float runAngle;
 
     [SerializeField] private GameObject facePanel;
 
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _audioClip;
+
     private void Start()
     {
+        childPos = GetComponent<Transform>();
         if (_agent == null)
             if (!TryGetComponent(out _agent))
                 Debug.LogWarning(name + "needs navmesh agent");
@@ -94,6 +99,31 @@ public class ChildRunaway : MonoBehaviour
 
     public void OnChildCaught()
     {
-        facePanel.SetActive(true);
+        if (!happy)
+        {
+            lookatAngle = 90f;
+            _audioSource.PlayOneShot(_audioClip);
+            facePanel.SetActive(true);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        print("is TriggerEnterd");
+        if (other.CompareTag("Player"))
+        {
+            if (childPos != null && target != null)
+            {
+                Vector2 direction =   target.position - childPos.position;
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                Quaternion rotation = Quaternion.AngleAxis(angle - lookatAngle, Vector3.forward);
+                childPos.rotation = rotation;
+            }
+            else
+            {
+                print("somting is null");
+            }
+        }
+        
     }
 }
