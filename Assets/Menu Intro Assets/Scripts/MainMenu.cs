@@ -15,13 +15,14 @@ public class MainMenu : MonoBehaviour
     private void Start()
     { 
         fadeIsHappening = false;
+        _mainMenuMusic.volume = 0.1f;
     }
 
     public void OnPlayClicked()
     {
         fade.Play("FadeOut");
         fadeIsHappening = true;
-        Invoke("PlayIntro",1);
+        Invoke("PlayIntro",1.3f);
         
     }
     
@@ -40,12 +41,12 @@ public class MainMenu : MonoBehaviour
 
     private void PlayIntro()
     {
-        SceneManager.LoadScene("Intro");
+        SceneManager.LoadScene("IntroScene");
     }
 
     private void Update()
     {
         if(!fadeIsHappening) return;
-        _mainMenuMusic.volume -= 0.06f * Time.deltaTime;
+        _mainMenuMusic.volume -= 0.13f * Time.deltaTime;
     }
 }
