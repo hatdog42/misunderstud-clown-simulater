@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class HappinessMeter : MonoBehaviour
 {
+    private sceneManeger _sceneManager;
     public float Happiness;
     public RectTransform eyeLeft;
     public RectTransform eyeRight;
@@ -17,6 +18,7 @@ public class HappinessMeter : MonoBehaviour
     private CursorController controls;
     private AudioSource _audio;
     public AudioClip stretchySound;
+    public AudioClip childrenLaughing;
 
     /*[SerializeField] private Vector3 _idealeyeL = new Vector3(-2, 2, 0);
     [SerializeField] private Vector3 _idealeyeR= new Vector3(2, 2, 0);
@@ -102,7 +104,7 @@ public class HappinessMeter : MonoBehaviour
                 _animator.Play("PanelExit");
                 if (childCounter >= 6)
                 {
-                    //end game winning
+                    _sceneManager.LoadSceneByName("WinScene");
                 }
                 else
                 {
