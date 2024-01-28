@@ -827,7 +827,7 @@ Transform:
   m_GameObject: {fileID: 257682281}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.102, y: 0.534, z: 0}
+  m_LocalPosition: {x: 0.05, y: 0.534, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1523,13 +1523,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   AttackPoint: {fileID: 257682282}
-  attackRange: 1.4
+  attackRange: 1
   enemyLayers:
     serializedVersion: 2
     m_Bits: 8
   camera: {fileID: 568165578}
-  _audioSource: {fileID: 0}
-  screemClip: {fileID: 0}
+  _audioSource: {fileID: 803478288}
+  screemClip: {fileID: 8300000, guid: 3f9bed40cad00644a9617058743e598e, type: 3}
   _animator: {fileID: 449048304}
 --- !u!50 &449048301
 Rigidbody2D:
