@@ -70,9 +70,10 @@ public class movment : MonoBehaviour
             {
                 if (!enemy.CompareTag("trigger"))
                 {
-                    childRunaway.happy = true;
+                    
                     childRunaway.OnChildCaught();
                     _audioSource.PlayOneShot(screemClip);
+                    childRunaway.happy = true;
                 }
             }
         }

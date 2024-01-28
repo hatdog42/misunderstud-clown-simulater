@@ -99,8 +99,10 @@ public class ChildRunaway : MonoBehaviour
 
     public void OnChildCaught()
     {
+        
         if (!happy)
         {
+            print("runing");
             lookatAngle = 90f;
             _audioSource.PlayOneShot(_audioClip);
             facePanel.SetActive(true);
