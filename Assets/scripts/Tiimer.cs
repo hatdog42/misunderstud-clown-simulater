@@ -15,8 +15,8 @@ public class Tiimer : MonoBehaviour
         }
         else
         {
-            remaningTime = 0;
             _sceneManager.LoadSceneByName("LoseScene");
+            remaningTime = 0;
         }
        
         int minutes = Mathf.FloorToInt(remaningTime / 60);
