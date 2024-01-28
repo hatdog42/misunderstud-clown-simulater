@@ -23,7 +23,7 @@ public class movment : MonoBehaviour
 
     [SerializeField]private Animator _animator;
 
-    private static bool canMove = true;
+    public static bool canMove = true;
     private void Start()
     {
         m_transform = GetComponent<Transform>();

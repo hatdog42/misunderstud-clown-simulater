@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HappinessMeter : MonoBehaviour
 {
@@ -83,6 +84,7 @@ public class HappinessMeter : MonoBehaviour
         _animator = GetComponent<Animator>();
         happy = true;
         StartCoroutine(SetPos());
+        movment.canMove = false;
         
         controls.Mouse.Click.started += _ => StartedClick();
     }
@@ -102,6 +104,7 @@ public class HappinessMeter : MonoBehaviour
                 happy = true;
                 childCounter += 1;
                 _animator.Play("PanelExit");
+                movment.canMove = true;
                 if (childCounter >= 6)
                 {
                     _sceneManager.LoadSceneByName("WinScene");
