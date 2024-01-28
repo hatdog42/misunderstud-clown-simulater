@@ -99,7 +99,6 @@ public class ChildRunaway : MonoBehaviour
 
     public void OnChildCaught()
     {
-        
         if (!happy)
         {
             print("runing");
