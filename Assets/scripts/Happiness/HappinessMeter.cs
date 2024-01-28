@@ -37,7 +37,6 @@ public class HappinessMeter : MonoBehaviour
     private Vector3 _idealmouthR;
     
     public bool happy;
-    public static int childCounter;
     private float Total;
 
     private Animator _animator;
@@ -102,10 +101,10 @@ public class HappinessMeter : MonoBehaviour
             if (Total > 16)
             {
                 happy = true;
-                childCounter += 1;
+                GameManager.childCounter += 1;
                 _animator.Play("PanelExit");
                 movment.canMove = true;
-                if (childCounter >= 6)
+                if (GameManager.childCounter >= 6)
                 {
                     _sceneManager.LoadSceneByName("WinScene");
                 }
