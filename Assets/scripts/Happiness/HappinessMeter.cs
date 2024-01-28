@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -12,7 +13,10 @@ public class HappinessMeter : MonoBehaviour
     public RectTransform eyebrowRight;
     public RectTransform mouthRight;
     public RectTransform mouthLeft;
-
+    
+    private CursorController controls;
+    private AudioSource _audio;
+    public AudioClip stretchySound;
 
     /*[SerializeField] private Vector3 _idealeyeL = new Vector3(-2, 2, 0);
     [SerializeField] private Vector3 _idealeyeR= new Vector3(2, 2, 0);
@@ -22,12 +26,12 @@ public class HappinessMeter : MonoBehaviour
     [SerializeField] private Vector3 _idealmouthR= new Vector3(2.4f, 1, 0);
     */
 
-    private RectTransform _idealeyeL;
-    private RectTransform _idealeyeR;
-    private RectTransform _idealeyebrowL;
-    private RectTransform _idealeyebrowR;
-    private RectTransform _idealmouthL;
-    private RectTransform _idealmouthR;
+    private Vector3 _idealeyeL;
+    private Vector3 _idealeyeR;
+    private Vector3 _idealeyebrowL;
+    private Vector3 _idealeyebrowR;
+    private Vector3 _idealmouthL;
+    private Vector3 _idealmouthR;
     
     public bool happy;
     public int childCounter;
@@ -40,48 +44,50 @@ public class HappinessMeter : MonoBehaviour
         Total = 0;
         //can loop through a list?
         //Calculate the distance between the ideal position and the actual position of each sticker and add values together, the lower the value the higher the happiness
-        Total+= Vector3.Distance(_idealeyeL.position, eyeLeft.position);
-        Total+= Vector3.Distance(_idealeyeR.position, eyeRight.position);
-        Total+= Vector3.Distance(_idealeyebrowL.position, eyebrowLeft.position);
-        Total+= Vector3.Distance(_idealeyebrowR.position, eyebrowRight.position);
-        Total+= Vector3.Distance(_idealmouthL.position, mouthLeft.position);
-        Total+= Vector3.Distance(_idealmouthR.position, mouthRight.position);
+        Total+= Vector3.Distance(_idealeyeL, eyeLeft.position);
+        Total+= Vector3.Distance(_idealeyeR, eyeRight.position);
+        Total+= Vector3.Distance(_idealeyebrowL, eyebrowLeft.position);
+        Total+= Vector3.Distance(_idealeyebrowR, eyebrowRight.position);
+        Total+= Vector3.Distance(_idealmouthL, mouthLeft.position);
+        Total+= Vector3.Distance(_idealmouthR, mouthRight.position);
+        
         print(Total);
-        if (Total > 5)
+        if (Total > 1)
         {
             Happiness = 0.2f;
         }
-        if (Total > 10)
+        if (Total > 5)
         {
             Happiness = 0.5f;
         }
-        if (Total > 15)
+        if (Total > 10)
         {
             Happiness = 0.7f;
         }
-        if (Total > 20)
+        if (Total > 15)
         {
             Happiness = 1f;
-            //animate panel leaving and destroy(gameobject)
-            
-            //check if childcounter == 6 if so end game, victory
         }
     }
-    
+
+    private void Awake()
+    {
+        controls = new CursorController();
+    }
+
     void Start()
     {
+        _audio = GetComponent<AudioSource>();
         _animator = GetComponent<Animator>();
-
-        _idealeyeL.position = eyeLeft.position;
-        _idealeyeR.position = eyeRight.position;
-        _idealeyebrowL.position = eyebrowLeft.position;
-        _idealeyebrowR.position = eyebrowRight.position;
-        _idealmouthL.position = mouthLeft.position;
-        _idealmouthR.position = mouthRight.position;
-
-        //StartCoroutine(FaceMiniGame());
+        happy = true;
+        StartCoroutine(SetPos());
         
-        //find location of all dragging spots, once all are moved a certain amount, total comes back true
+        controls.Mouse.Click.started += _ => StartedClick();
+    }
+    private void StartedClick()
+    {
+        _audio.Stop();
+        _audio.PlayOneShot(stretchySound);
     }
   
     void Update()
@@ -89,18 +95,43 @@ public class HappinessMeter : MonoBehaviour
         if (!happy)
         {
             CalculateHappiness();
-            if (Total < 3)
+            if (Total > 16)
             {
                 happy = true;
                 childCounter += 1;
                 _animator.Play("PanelExit");
+                if (childCounter >= 6)
+                {
+                    //end game winning
+                }
+                else
+                {
+                    //Destroy(gameObject);
+                }
             }
         }
     }
 
-    private IEnumerator FaceMiniGame()
+    private IEnumerator SetPos()
     {
-        yield return new WaitForSeconds(15);
-        gameObject.SetActive(false);
+        yield return new WaitForSeconds(1);
+        
+        _idealeyeL = eyeLeft.position;
+        _idealeyeR = eyeRight.position;
+        _idealeyebrowL = eyebrowLeft.position;
+        _idealeyebrowR = eyebrowRight.position;
+        _idealmouthL = mouthLeft.position;
+        _idealmouthR = mouthRight.position;
+        happy = false;
+    }
+    
+    private void OnEnable()
+    {
+        controls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        controls.Disable();
     }
 }
