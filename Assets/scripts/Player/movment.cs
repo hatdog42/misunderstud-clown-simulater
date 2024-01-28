@@ -68,7 +68,7 @@ public class movment : MonoBehaviour
             
             if (childRunaway != null)
             {
-                if (!hitEnemies.Collider2D.isTrigger)
+                //if (!hitEnemies.Collider2D.isTrigger)
                 {
                     
                 }
