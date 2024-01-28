@@ -35,14 +35,16 @@ public class movment : MonoBehaviour
         if (canMove)
         {
             _rigidbody2D.velocity = new Vector2(_input.moveDirection.x * moveSpeed, _input.moveDirection.y * moveSpeed);
+            if (_input.attackPressed)
+            {
+                Attack();
+            }
+            LAmouse();
         }
-
-        if (_input.attackPressed)
+        else
         {
-            Attack();
+            _rigidbody2D.velocity = Vector2.zero;
         }
-        
-        LAmouse();
     }
 
     private void LAmouse()

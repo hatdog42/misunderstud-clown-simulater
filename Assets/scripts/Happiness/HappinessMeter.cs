@@ -119,7 +119,7 @@ public class HappinessMeter : MonoBehaviour
 
     private IEnumerator SetPos()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3);
         
         _idealeyeL = eyeLeft.position;
         _idealeyeR = eyeRight.position;
