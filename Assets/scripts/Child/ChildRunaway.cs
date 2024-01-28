@@ -109,7 +109,6 @@ public class ChildRunaway : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        print("is TriggerEnterd");
         if (other.CompareTag("Player"))
         {
             if (childPos != null && target != null)

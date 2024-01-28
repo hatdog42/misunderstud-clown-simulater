@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5561741375497425452}
   - component: {fileID: 7623076891992722358}
   - component: {fileID: 1621193650336009550}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bush_Small_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1724746535490496880}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.436206, y: 8.440283, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
