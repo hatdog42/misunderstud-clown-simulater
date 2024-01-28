@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     private CursorController controls;
     
     private static GameManager instance;
+    
+    public static int childCounter;
 
     private void Awake()
     {
@@ -44,6 +46,8 @@ public class GameManager : MonoBehaviour
     {
         controls.Mouse.Click.started += _ => StartedClick();
         controls.Mouse.Click.performed += _ => EndedClick();
+
+        childCounter = 0;
     }
 
     private void StartedClick()
