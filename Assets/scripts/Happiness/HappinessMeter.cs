@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class HappinessMeter : MonoBehaviour
 {
+    private sceneManeger _sceneManager;
     public float Happiness;
     public RectTransform eyeLeft;
     public RectTransform eyeRight;
@@ -103,7 +104,7 @@ public class HappinessMeter : MonoBehaviour
                 _animator.Play("PanelExit");
                 if (childCounter >= 6)
                 {
-                    //end game winning
+                    _sceneManager.LoadSceneByName("WinScene");
                 }
                 else
                 {
