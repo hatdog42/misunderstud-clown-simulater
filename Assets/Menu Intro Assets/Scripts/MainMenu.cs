@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
     private void Start()
     { 
         fadeIsHappening = false;
-        _mainMenuMusic.volume = 0.1f;
+        _mainMenuMusic.volume = 0.3f;
         GameManager.childCounter = 0;
     }
 
@@ -48,6 +48,6 @@ public class MainMenu : MonoBehaviour
     private void Update()
     {
         if(!fadeIsHappening) return;
-        _mainMenuMusic.volume -= 0.13f * Time.deltaTime;
+        _mainMenuMusic.volume -= 0.4f * Time.deltaTime;
     }
 }
