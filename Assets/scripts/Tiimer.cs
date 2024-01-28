@@ -3,7 +3,7 @@ using UnityEngine;
 using TMPro;
 public class Tiimer : MonoBehaviour
 {
-    private sceneManeger _sceneManager;
+    [SerializeField] private sceneManeger _sceneManager;
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField]private float remaningTime;
 

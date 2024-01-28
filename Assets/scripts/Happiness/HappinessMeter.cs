@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class HappinessMeter : MonoBehaviour
 {
-    private sceneManeger _sceneManager;
+    [SerializeField] private sceneManeger _sceneManager;
     public float Happiness;
     public RectTransform eyeLeft;
     public RectTransform eyeRight;
@@ -108,17 +108,13 @@ public class HappinessMeter : MonoBehaviour
                 {
                     _sceneManager.LoadSceneByName("WinScene");
                 }
-                else
-                {
-                    //Destroy(gameObject);
-                }
             }
         }
     }
 
     private IEnumerator SetPos()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1.5f);
         
         _idealeyeL = eyeLeft.position;
         _idealeyeR = eyeRight.position;

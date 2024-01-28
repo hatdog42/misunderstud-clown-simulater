@@ -1193,6 +1193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d577526c0b50fcb48be0783c18bd01d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sceneManager: {fileID: 1290666411}
   timerText: {fileID: 422783268}
   remaningTime: 180
 --- !u!114 &422783268
@@ -6799,6 +6800,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d2dd4d80f376db4ba28e16ffba8fac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1290666410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1290666412}
+  - component: {fileID: 1290666411}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1290666411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290666410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d2dd4d80f376db4ba28e16ffba8fac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1290666412
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290666410}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.10596287, y: -10.507178, z: -0.9465227}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1291906362
 GameObject:
   m_ObjectHideFlags: 3
@@ -10768,6 +10813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 169d16183f67280458ca9f66ce0ed480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sceneManager: {fileID: 1290666411}
   Happiness: 0
   eyeLeft: {fileID: 4464370461040193212}
   eyeRight: {fileID: 6387050030537921157}
@@ -10943,6 +10989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 169d16183f67280458ca9f66ce0ed480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sceneManager: {fileID: 1290666411}
   Happiness: 0
   eyeLeft: {fileID: 3869414495058545205}
   eyeRight: {fileID: 2425675367752482891}
@@ -10999,6 +11046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 169d16183f67280458ca9f66ce0ed480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sceneManager: {fileID: 1290666411}
   Happiness: 0
   eyeLeft: {fileID: 3429106575679360528}
   eyeRight: {fileID: 7384042208567532274}
@@ -12690,6 +12738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 169d16183f67280458ca9f66ce0ed480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sceneManager: {fileID: 1290666411}
   Happiness: 0
   eyeLeft: {fileID: 75677148423745505}
   eyeRight: {fileID: 7948265551658582220}
@@ -14380,6 +14429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 169d16183f67280458ca9f66ce0ed480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sceneManager: {fileID: 1290666411}
   Happiness: 0
   eyeLeft: {fileID: 2456894336747152162}
   eyeRight: {fileID: 1960026784829914774}
@@ -18076,6 +18126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 169d16183f67280458ca9f66ce0ed480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sceneManager: {fileID: 1290666411}
   Happiness: 0
   eyeLeft: {fileID: 7315461581535062993}
   eyeRight: {fileID: 2635826175207488868}
@@ -18209,3 +18260,4 @@ SceneRoots:
   - {fileID: 787460006}
   - {fileID: 803478289}
   - {fileID: 935360962}
+  - {fileID: 1290666412}
