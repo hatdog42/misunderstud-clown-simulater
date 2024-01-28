@@ -39,6 +39,8 @@ public class HappinessMeter : MonoBehaviour
     public bool happy;
     private float Total;
 
+    private bool stretch;
+
     private Animator _animator;
 
     private void CalculateHappiness()
@@ -83,13 +85,18 @@ public class HappinessMeter : MonoBehaviour
         happy = true;
         StartCoroutine(SetPos());
         movment.canMove = false;
+
+        stretch = true;
         
         controls.Mouse.Click.started += _ => StartedClick();
     }
     private void StartedClick()
     {
-        _audio.Stop();
-        _audio.PlayOneShot(stretchySound);
+        if(stretch)
+        {
+            _audio.Stop();
+            _audio.PlayOneShot(stretchySound);
+        }
     }
   
     void Update()
@@ -101,7 +108,7 @@ public class HappinessMeter : MonoBehaviour
             {
                 happy = true;
                 GameManager.childCounter += 1;
-                //_audio.PlayOneShot(childLaughing);
+                _audio.PlayOneShot(childLaughing);
                 _animator.Play("PanelExit");
                 movment.canMove = true;
                 if (GameManager.childCounter >= 6)
@@ -141,7 +148,8 @@ public class HappinessMeter : MonoBehaviour
 
     private IEnumerator PanelDestroy()
     {
-        yield return new WaitForSeconds(.5f);
+        stretch = false;
+        yield return new WaitForSeconds(20);
         Destroy(gameObject);
     }
 }

@@ -11294,7 +11294,7 @@ MonoBehaviour:
   mouthRight: {fileID: 269282823033633580}
   mouthLeft: {fileID: 5443884068611623918}
   stretchySound: {fileID: 8300000, guid: a4135d88d1a4cd046a532e991330b2f9, type: 3}
-  childLaughing: {fileID: 0}
+  childLaughing: {fileID: 8300000, guid: 55be60b2f69624f469aadd3bb308fc4d, type: 3}
   happy: 0
 --- !u!1 &45978549540309586
 GameObject:
@@ -11470,7 +11470,7 @@ MonoBehaviour:
   mouthRight: {fileID: 2748940223378292419}
   mouthLeft: {fileID: 3007283659088061156}
   stretchySound: {fileID: 8300000, guid: a4135d88d1a4cd046a532e991330b2f9, type: 3}
-  childLaughing: {fileID: 0}
+  childLaughing: {fileID: 8300000, guid: 36314adc77b2cb141a59c8217f0b9be0, type: 3}
   happy: 0
 --- !u!1 &341239206362378950
 GameObject:
@@ -11527,7 +11527,7 @@ MonoBehaviour:
   mouthRight: {fileID: 653940568739905442}
   mouthLeft: {fileID: 7789420201080208451}
   stretchySound: {fileID: 8300000, guid: a4135d88d1a4cd046a532e991330b2f9, type: 3}
-  childLaughing: {fileID: 0}
+  childLaughing: {fileID: 8300000, guid: 26f82ac4ba01b1e4f98d1eab7663082e, type: 3}
   happy: 0
 --- !u!224 &364331602959212228
 RectTransform:
@@ -13219,7 +13219,7 @@ MonoBehaviour:
   mouthRight: {fileID: 171182633100055920}
   mouthLeft: {fileID: 5845336074259859339}
   stretchySound: {fileID: 8300000, guid: fb4512d2d01e23f44b392cb4835b843c, type: 3}
-  childLaughing: {fileID: 0}
+  childLaughing: {fileID: 8300000, guid: 7f9962e84083257449ff9313d7feeae4, type: 3}
   happy: 0
 --- !u!1 &2447187676288576845
 GameObject:
@@ -13671,7 +13671,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -14910,7 +14910,7 @@ MonoBehaviour:
   mouthRight: {fileID: 3272174800921244411}
   mouthLeft: {fileID: 6328103070929319608}
   stretchySound: {fileID: 8300000, guid: fb4512d2d01e23f44b392cb4835b843c, type: 3}
-  childLaughing: {fileID: 0}
+  childLaughing: {fileID: 8300000, guid: 508145479033999439a5618b2c17bcfc, type: 3}
   happy: 0
 --- !u!224 &4373368509980389223
 RectTransform:
@@ -18607,7 +18607,7 @@ MonoBehaviour:
   mouthRight: {fileID: 1122003761170660910}
   mouthLeft: {fileID: 3966228825571940342}
   stretchySound: {fileID: 8300000, guid: fb4512d2d01e23f44b392cb4835b843c, type: 3}
-  childLaughing: {fileID: 0}
+  childLaughing: {fileID: 8300000, guid: c4a9e4751f274a84a86dcc6e105ade82, type: 3}
   happy: 0
 --- !u!1 &9018553012317504540
 GameObject:
