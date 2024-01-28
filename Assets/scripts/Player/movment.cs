@@ -72,7 +72,7 @@ public class movment : MonoBehaviour
                 {
                     
                     childRunaway.OnChildCaught();
-                    _audioSource.PlayOneShot(screemClip);
+                    //_audioSource.PlayOneShot(screemClip);
                     childRunaway.happy = true;
                 }
             }

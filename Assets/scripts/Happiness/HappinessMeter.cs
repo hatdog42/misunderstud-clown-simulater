@@ -19,7 +19,7 @@ public class HappinessMeter : MonoBehaviour
     private CursorController controls;
     private AudioSource _audio;
     public AudioClip stretchySound;
-    public AudioClip childrenLaughing;
+    public AudioClip childLaughing;
 
     /*[SerializeField] private Vector3 _idealeyeL = new Vector3(-2, 2, 0);
     [SerializeField] private Vector3 _idealeyeR= new Vector3(2, 2, 0);
@@ -53,7 +53,6 @@ public class HappinessMeter : MonoBehaviour
         Total+= Vector3.Distance(_idealmouthL, mouthLeft.position);
         Total+= Vector3.Distance(_idealmouthR, mouthRight.position);
         
-        print(Total);
         if (Total > 1)
         {
             Happiness = 0.2f;
@@ -102,6 +101,7 @@ public class HappinessMeter : MonoBehaviour
             {
                 happy = true;
                 GameManager.childCounter += 1;
+                //_audio.PlayOneShot(childLaughing);
                 _animator.Play("PanelExit");
                 movment.canMove = true;
                 if (GameManager.childCounter >= 6)

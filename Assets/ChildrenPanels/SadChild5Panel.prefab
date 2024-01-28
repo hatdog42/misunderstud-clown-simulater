@@ -307,6 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 169d16183f67280458ca9f66ce0ed480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sceneManager: {fileID: 0}
   Happiness: 0
   eyeLeft: {fileID: 5834639468307264786}
   eyeRight: {fileID: 1807927699572138480}
@@ -315,8 +316,8 @@ MonoBehaviour:
   mouthRight: {fileID: 8538029492651410592}
   mouthLeft: {fileID: 1402866382615185217}
   stretchySound: {fileID: 8300000, guid: a4135d88d1a4cd046a532e991330b2f9, type: 3}
+  childLaughing: {fileID: 8300000, guid: 26f82ac4ba01b1e4f98d1eab7663082e, type: 3}
   happy: 0
-  childCounter: 0
 --- !u!82 &4272844004610046805
 AudioSource:
   m_ObjectHideFlags: 0

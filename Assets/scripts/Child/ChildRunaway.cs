@@ -103,7 +103,7 @@ public class ChildRunaway : MonoBehaviour
         {
             print("runing");
             lookatAngle = 90f;
-            _audioSource.PlayOneShot(_audioClip);
+            //_audioSource.PlayOneShot(_audioClip);
             facePanel.SetActive(true);
         }
     }
