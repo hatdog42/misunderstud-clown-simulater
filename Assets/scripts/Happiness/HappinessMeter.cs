@@ -108,6 +108,10 @@ public class HappinessMeter : MonoBehaviour
                 {
                     _sceneManager.LoadSceneByName("WinScene");
                 }
+                else
+                {
+                    StartCoroutine(PanelDestroy());
+                }
             }
         }
     }
@@ -133,5 +137,11 @@ public class HappinessMeter : MonoBehaviour
     private void OnDisable()
     {
         controls.Disable();
+    }
+
+    private IEnumerator PanelDestroy()
+    {
+        yield return new WaitForSeconds(.5f);
+        Destroy(gameObject);
     }
 }
