@@ -3,6 +3,7 @@ using UnityEngine;
 using TMPro;
 public class Tiimer : MonoBehaviour
 {
+    private sceneManeger _sceneManager;
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField]private float remaningTime;
 
@@ -15,7 +16,7 @@ public class Tiimer : MonoBehaviour
         else
         {
             remaningTime = 0;
-            //YOU LOOSE
+            _sceneManager.LoadSceneByName("LoseScene");
         }
        
         int minutes = Mathf.FloorToInt(remaningTime / 60);
